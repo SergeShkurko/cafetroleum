@@ -1,11 +1,11 @@
 name: cafetroleum
-description: "An interview application"
+description: 'An interview application'
 publish_to: 'none'
 
 version: 1.0.0+1
 
 environment:
-  sdk: ^3.5.1
+  sdk: '>=3.5.0-152 <4.0.0'
 
 dependencies:
   flutter:
@@ -22,9 +22,11 @@ dependencies:
   fpdart: ^1.1.0
   rxdart: ^0.28.0
   drift: ^2.20.0
+  sqlite3: ^2.4.6
   sqlite3_flutter_libs: ^0.5.24
   path: ^1.9.0
   path_provider: ^2.1.4
+  json: ^0.20.2
   # Hierarchy
   get_it: ^7.7.0
   injectable: ^2.4.4
@@ -33,8 +35,9 @@ dependencies:
   # UI
   # Helpers
   json_annotation: ^4.9.0
-  # freezed_annotation: ^2.4.4
-  freezed: ^3.0.0-0.0.dev
+  # Imported as local package because of macros experiment
+  freezed: 
+    path: packages/freezed-3.0.0-0.0.dev
   cached_annotation: ^1.7.0
   meta: ^1.15.0
   # extension: ^0.6.0

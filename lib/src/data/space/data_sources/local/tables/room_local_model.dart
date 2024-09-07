@@ -1,14 +1,13 @@
 import 'package:drift/drift.dart';
 
-@DataClassName('ProductLocalModel')
-class ProductLocalModel extends Table {
+@DataClassName('RoomLocalModel')
+class Rooms extends Table {
   @override
-  String get tableName => 'products';
+  String get tableName => 'rooms';
 
   @override
   Set<Column> get primaryKey => {id};
 
   TextColumn get id => text()();
   TextColumn get name => text()();
-  RealColumn get price => real()();
 }

@@ -1,16 +1,15 @@
 import 'package:cafetroleum/src/core/core.dart';
 import 'package:cafetroleum/src/domain/product/entities/product_entity.dart';
-import 'package:injectable/injectable.dart';
 
-abstract interface class MockProductDataSource {
+abstract interface class ProductMockDataSource {
   TaskWithFailure<Iterable<ProductEntity>> fetch();
 }
 
-@Injectable(as: MockProductDataSource)
-class MockProductDataSourceImpl implements MockProductDataSource {
+@Injectable(as: ProductMockDataSource)
+class ProductMockDataSourceImpl implements ProductMockDataSource {
   @override
   TaskWithFailure<Iterable<ProductEntity>> fetch() {
-    return TaskEither.right(const [
+    return TaskEither.right([
       ProductEntity(id: '3', name: 'Potatoes', price: 10),
       ProductEntity(id: '4', name: 'Coffee', price: 2),
       ProductEntity(id: '5', name: 'Bread', price: 3),

@@ -1,6 +1,5 @@
 import 'package:cafetroleum/src/core/core.dart';
 import 'package:cafetroleum/src/domain/product/repositories/product_repository.dart';
-import 'package:injectable/injectable.dart';
 
 @injectable
 class FetchProductsUsecase implements UseCase<TaskWithFailure<void>, NoParams> {

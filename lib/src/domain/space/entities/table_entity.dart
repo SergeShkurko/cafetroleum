@@ -1,8 +1,8 @@
 import 'package:freezed/freezed.dart';
 
 @Freezed()
-class ProductEntity {
+class TableEntity {
   final String id;
-  final String name;
-  final double price;
+  final String roomId;
+  final int seats;
 }
